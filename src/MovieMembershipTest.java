@@ -9,9 +9,9 @@ public class MovieMembershipTest {
 
     public static void main(String[] args) {
         // Three movie membership objects, one of each type (SilverMember, GoldMember, IMAXMember)
-        MovieMembership mySilver = new SilverMember("John Silver", "Inception", "Standard", 18, 30, "Popcorn");
-        MovieMembership myGold = new GoldMember("Jane Gold", "Avatar", "IMAX", 20, 15, "Candy");
-        MovieMembership myIMAX = new IMAXMember("Alex IMAX", "Interstellar", "IMAX", 22, 0, "Soda");
+        MovieMembership mySilver = new SilverMember("Birendra Bista", "Inception", "Standard", 18, 30, "Popcorn");
+        MovieMembership myGold = new GoldMember("Rhythm Bhandari", "Avatar", "IMAX", 20, 15, "Candy");
+        MovieMembership myIMAX = new IMAXMember("Rajesh Ranabhat", "Interstellar", "IMAX", 22, 0, "Soda");
 
         // Array to store MovieMembership objects
         MovieMembership[] movieMembershipArray = {mySilver, myGold, myIMAX};

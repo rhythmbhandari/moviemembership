@@ -113,24 +113,7 @@ public abstract class MovieMembership {
      *
      * @return The hour of the showtime.
      */
-    public int getShowHour() {
-        return showHour;
-    }
 
-    /**
-     * Gets the minute of the showtime.
-     *
-     * @return The minute of the showtime.
-     */
-    public int getShowMinutes() {
-        return showMinutes;
-    }
-
-    /**
-     * Gets the snack for the movie.
-     *
-     * @return The snack for the movie.
-     */
     public String getSnack() {
         return snack;
     }
