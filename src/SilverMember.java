@@ -1,5 +1,14 @@
 /**
- * Represents a SilverMember, a type of MovieMembership with specific benefits.
+ * Name: SilverMember
+ * Date: November 11, 2023,
+ * Author: Rhythm Bhandari and Birendra Bista
+ * Purpose: The SilverMember class extends MovieMembership,
+ * representing Silver status with customizable discount and points rates,
+ * and provides methods for purchasing tickets, displaying benefits, and returning membership details.
+ */
+
+/**
+ * Represents a SilverMember, a type of MovieMembership.
  */
 public class SilverMember extends MovieMembership {
     // Discount rate for Silver members
@@ -9,7 +18,7 @@ public class SilverMember extends MovieMembership {
     private double pointsRate;
 
     /**
-     * Constructs a SilverMember with default discount and points rates.
+     * Constructor for creating a SilverMember with default discount and points rates.
      *
      * @param memberName The name of the member.
      */
@@ -20,7 +29,7 @@ public class SilverMember extends MovieMembership {
     }
 
     /**
-     * Constructs a SilverMember with custom discount and points rates.
+     * Constructor for creating a SilverMember with custom discount and points rates.
      *
      * @param memberName   The name of the member.
      * @param discountRate The custom discount rate for the member.
@@ -33,7 +42,7 @@ public class SilverMember extends MovieMembership {
     }
 
     /**
-     * Constructs a SilverMember with default discount and points rates and additional movie details.
+     * Constructor for creating a SilverMember with default discount, points rates and additional movie details.
      *
      * @param memberName   The name of the member.
      * @param nextMovie    The next movie for the member.
@@ -49,7 +58,7 @@ public class SilverMember extends MovieMembership {
     }
 
     /**
-     * Constructs a SilverMember with custom discount and points rates and additional movie details.
+     * Constructor for creating a SilverMember with custom discount and points rates and additional movie details.
      *
      * @param memberName   The name of the member.
      * @param nextMovie    The next movie for the member.
@@ -77,7 +86,7 @@ public class SilverMember extends MovieMembership {
     }
 
     /**
-     * Returns a string representation of the member's details.
+     * Returns the member's details.
      *
      * @return Details of the member.
      */

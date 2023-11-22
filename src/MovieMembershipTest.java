@@ -1,15 +1,12 @@
 /**
  * Name: MovieMembershipTest
  * Date: November 11, 2023,
- * Author: Rhythm Bhandari
+ * Author: Rhythm Bhandari and Birendra Bista
  * Purpose: This program demonstrates the functionality of the MovieMembership hierarchy.
  */
 
 public class MovieMembershipTest {
 
-    /**
-     * The main method where the program starts.
-     */
     public static void main(String[] args) {
         // Three movie membership objects, one of each type (SilverMember, GoldMember, IMAXMember)
         MovieMembership mySilver = new SilverMember("John Silver", "Inception", "Standard", 18, 30, "Popcorn");
@@ -55,7 +52,6 @@ public class MovieMembershipTest {
      * @param member The MovieMembership object.
      */
     private static void displayMemberMethods(MovieMembership member) {
-        // Display various details for the MovieMembership
         System.out.printf("Member Name: %s%n", member.getMemberName());
         System.out.printf("Membership Rank: %s%n", member.returnMembershipRank());
         System.out.printf("Points: %d%n", member.getPoints());
@@ -82,9 +78,7 @@ public class MovieMembershipTest {
     private static void purchaseMovieTicketAndPrintDetails(MovieMembership member, String movie,
                                                            String theatreType, int showHour, int showMinute,
                                                            String snack, double ticketPrice) {
-        // Purchase a movie ticket for the MovieMembership
         member.purchaseMovieTicket(ticketPrice, movie, theatreType, showHour, showMinute, snack);
-        // Display updated information
         System.out.println(member.getMemberDetails());
     }
 

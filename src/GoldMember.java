@@ -1,25 +1,34 @@
+/**
+ * Name: GoldMember
+ * Date: November 11, 2023,
+ * Author: Rhythm Bhandari and Birendra Bista
+ * Purpose: The GoldMember class represents a movie membership with VIP privileges, inheriting from SilverMember and
+ * implementing VIP-specific features like VIP lounge access and alcohol purchase.
+ */
+
 import java.util.Scanner;
 
 /**
  * Represents a GoldMember, a type of MovieMembership with additional VIP privileges.
+ * Inheriting a SilverMember Class to extend its functionality and also implementing VIPPrivilege interface.
  */
 public class GoldMember extends SilverMember implements VIPPrivilege {
-    // Flag to track whether the member has valid credentials for VIP privileges
+    // Variable to track whether the member has valid credentials for VIP privileges
     private boolean validCredentials;
 
     /**
-     * Constructs a GoldMember with default discount and points rates and initializes VIP privileges.
+     * Constructor for creating a GoldMember with default discount and points rates and initializes VIP privileges.
      *
      * @param memberName The name of the member.
      */
     public GoldMember(String memberName) {
         super(memberName, 0.25, 2.0);
         this.validCredentials = false;
-        this.addPoints(50); // Gold members begin with 50 points
+        this.addPoints(50);
     }
 
     /**
-     * Constructs a GoldMember with custom discount and points rates, additional movie details, and initializes VIP privileges.
+     * Constructor for creating a GoldMember with custom discount and points rates, additional movie details, and initializes VIP privileges.
      *
      * @param memberName   The name of the member.
      * @param nextMovie    The next movie for the member.
@@ -31,10 +40,11 @@ public class GoldMember extends SilverMember implements VIPPrivilege {
     public GoldMember(String memberName, String nextMovie, String theatreType, int showHour, int showMinute, String snack) {
         super(memberName, nextMovie, theatreType, showHour, showMinute, snack, 0.25, 2.0);
         this.validCredentials = false;
-        this.addPoints(50); // Gold members begin with 50 points
+        this.addPoints(50);
     }
 
     /**
+     *
      * Returns the membership rank of the member.
      *
      * @return The membership rank.
@@ -45,7 +55,7 @@ public class GoldMember extends SilverMember implements VIPPrivilege {
     }
 
     /**
-     * Returns a string representation of the member's details, including VIP privileges.
+     * Display the member's details.
      *
      * @return Details of the member with VIP privileges.
      */
@@ -70,12 +80,13 @@ public class GoldMember extends SilverMember implements VIPPrivilege {
         } else {
             validCredentials = false;
         }
+        scanner.close();
     }
 
     /**
      * Allows the GoldMember to purchase alcohol if they have valid VIP credentials.
      *
-     * @return A message indicating whether the beverage can be purchased.
+     * @return Whether the beverage can be purchased or not.
      */
     @Override
     public String purchaseAlcohol() {

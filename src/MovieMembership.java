@@ -1,8 +1,16 @@
 /**
+ * Name: MovieMembership
+ * Date: November 11, 2023,
+ * Author: Rhythm Bhandari and Birendra Bista
+ * Purpose: The MovieMembership abstract class defines a template for movie memberships,
+ * encapsulating member details and providing abstract methods for membership rank,
+ * benefit display, and ticket purchase across different membership types.
+ */
+
+/**
  * Abstract class representing a movie membership.
  */
 public abstract class MovieMembership {
-    // Member variables
     private String memberName;
     private String nextMovie;
     private String theatreType;
@@ -28,7 +36,7 @@ public abstract class MovieMembership {
     }
 
     /**
-     * Constructor for creating a MovieMembership with specified details.
+     * Constructor for creating a MovieMembership with entered details.
      *
      * @param memberName  The name of the member.
      * @param nextMovie   The name of the next movie.
@@ -38,7 +46,6 @@ public abstract class MovieMembership {
      * @param snack       The snack for the movie.
      */
     public MovieMembership(String memberName, String nextMovie, String theatreType, int showHour, int showMinutes, String snack) {
-        // Initialize with specified values
         this.memberName = memberName;
         this.nextMovie = nextMovie;
         this.theatreType = theatreType;
@@ -187,7 +194,7 @@ public abstract class MovieMembership {
     }
 
     /**
-     * Returns a formatted string representation of the showtime.
+     * Displays the showtime.
      *
      * @return The showtime as a formatted string.
      */
@@ -196,7 +203,7 @@ public abstract class MovieMembership {
     }
 
     /**
-     * Returns a string representation of the member's details.
+     * Displays the member's details.
      *
      * @return Details of the member.
      */

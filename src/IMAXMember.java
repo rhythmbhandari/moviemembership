@@ -1,5 +1,16 @@
 /**
+ * Name: IMAXMember
+ * Date: November 11, 2023,
+ * Author: Rhythm Bhandari and Birendra Bista
+ * Purpose: The IMAXMember class extends MovieMembership to model members with IMAX privileges,
+ * featuring customized discount and points rates, and methods for purchasing IMAX tickets,
+ * displaying benefits, and returning membership details.
+ */
+
+
+/**
  * Represents a member with IMAX membership.
+ * Inheriting a MovieMembership Class to extend its functionality
  */
 public class IMAXMember extends MovieMembership {
     // Member variables specific to IMAXMember
@@ -12,9 +23,7 @@ public class IMAXMember extends MovieMembership {
      * @param memberName The name of the member.
      */
     public IMAXMember(String memberName) {
-        // Call the base class constructor
         super(memberName);
-        // Initialize IMAX-specific values
         this.discountRate = 0.5;
         this.pointsRate = 1.3;
         // Add initial points for IMAX membership
@@ -32,9 +41,8 @@ public class IMAXMember extends MovieMembership {
      * @param snack       The snack for the movie.
      */
     public IMAXMember(String memberName, String nextMovie, String theatreType, int showHour, int showMinute, String snack) {
-        // Call the base class constructor with specified details
+        // Calling the base class constructor with specified details
         super(memberName, nextMovie, theatreType, showHour, showMinute, snack);
-        // Initialize IMAX-specific values
         this.discountRate = 0.5;
         this.pointsRate = 1.3;
         // Add initial points for IMAX membership
@@ -52,7 +60,7 @@ public class IMAXMember extends MovieMembership {
     }
 
     /**
-     * Returns a string representation of the member's details, including membership rank.
+     * Returns the member's details, including membership rank.
      *
      * @return Details of the member.
      */
@@ -91,6 +99,7 @@ public class IMAXMember extends MovieMembership {
         if ("IMAX".equalsIgnoreCase(theatreType)) {
             // Apply discount for IMAX theatre
             double priceWithDiscount = ticketPrice * (1 - discountRate);
+
             // Calculate and add points based on the ticket price
             int pointsToAdd = (int) (ticketPrice * pointsRate);
             addPoints(pointsToAdd);
